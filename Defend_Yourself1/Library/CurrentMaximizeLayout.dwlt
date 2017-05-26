@@ -19,12 +19,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1440
     height: 749
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 12555
+=======
+    width: 1920
+    height: 947
+  m_MinSize: {x: 707, y: 471}
+  m_MaxSize: {x: 18002, y: 14021}
+  vertical: 0
+  controlID: 17649
+>>>>>>> origin/Ryan's-Branch
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -48,9 +57,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 478
     width: 927
     height: 344
+=======
+    y: 17
+    width: 1407
+    height: 926
+>>>>>>> origin/Ryan's-Branch
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
@@ -59,10 +74,17 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -463.5
     m_HBaseRangeMax: 463.5
     m_VBaseRangeMin: -163.5
     m_VBaseRangeMax: 163.5
+=======
+    m_HBaseRangeMin: -703.5
+    m_HBaseRangeMax: 703.5
+    m_VBaseRangeMin: -454.5
+    m_VBaseRangeMax: 454.5
+>>>>>>> origin/Ryan's-Branch
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -71,7 +93,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
@@ -79,25 +101,43 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 927
       height: 327
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 463.5, y: 163.5}
+=======
+      width: 1407
+      height: 909
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 703.5, y: 454.5}
+>>>>>>> origin/Ryan's-Branch
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -463.5
       y: -163.5
       width: 927
       height: 327
+=======
+      x: -703.5
+      y: -454.5
+      width: 1407
+      height: 909
+>>>>>>> origin/Ryan's-Branch
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 927, y: 344}
+=======
+  m_LastWindowPixelSize: {x: 1407, y: 926}
+>>>>>>> origin/Ryan's-Branch
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -109,6 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -133,6 +174,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+=======
+>>>>>>> origin/Ryan's-Branch
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -141,16 +184,31 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 929
     height: 384
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 5}
+=======
+    width: 1409
+    height: 947
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 2}
+>>>>>>> origin/Ryan's-Branch
   m_Panes:
+  - {fileID: 4}
+  - {fileID: 2}
   - {fileID: 5}
+<<<<<<< HEAD
   m_Selected: 0
+=======
+  - {fileID: 6}
+  m_Selected: 1
+>>>>>>> origin/Ryan's-Branch
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -173,18 +231,32 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 94
     width: 927
     height: 363
   m_SceneLighting: 1
   lastFramingTime: 6059.321704983711
+=======
+    y: 92
+    width: 1407
+    height: 926
+  m_SceneLighting: 1
+  lastFramingTime: 2266.929488091898
+>>>>>>> origin/Ryan's-Branch
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -146.5685, y: -63.886887, z: 100}
     speed: 2
     m_Value: {x: -146.5685, y: -63.886887, z: 100}
+=======
+    m_Target: {x: -5.8079243, y: -2.8428154, z: -0.2998047}
+    speed: 2
+    m_Value: {x: -5.8079243, y: -2.8428154, z: -0.2998047}
+>>>>>>> origin/Ryan's-Branch
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -211,9 +283,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 94.84807
     speed: 2
     m_Value: 94.84807
+=======
+    m_Target: 4.794428
+    speed: 2
+    m_Value: 4.794428
+>>>>>>> origin/Ryan's-Branch
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -224,7 +302,7 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &6
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -232,6 +310,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -249,6 +328,77 @@ MonoBehaviour:
   - {fileID: 2}
   m_Selected: 0
   m_LastSelected: 0
+=======
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoRepaintOnSceneChange: 0
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_TitleContent:
+    m_Text: Asset Store
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_DepthBufferBits: 0
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 92
+    width: 1407
+    height: 926
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoRepaintOnSceneChange: 1
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_DepthBufferBits: 0
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 92
+    width: 1407
+    height: 926
+  m_ViewPositions:
+    m_KeySerializationHelper:
+    - {fileID: 1107810516692331456, guid: f1c6446a882b54605b85549a423dea78, type: 2}
+    - {fileID: 1107689469831295500, guid: c3b7119f8fedd3d40a98b4230abf0d6b, type: 2}
+    m_ValueSerializationHelper:
+    - {x: 780.2001, y: 327.60004}
+    - {x: 744.2001, y: 435.60004}
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: c3b7119f8fedd3d40a98b4230abf0d6b,
+    type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 1107689469831295500, guid: c3b7119f8fedd3d40a98b4230abf0d6b,
+      type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_LiveLinkFollowTransitions: 0
+  m_MiniTool: 0
+  m_SerializedLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+>>>>>>> origin/Ryan's-Branch
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,11 +418,19 @@ MonoBehaviour:
     x: 929
     y: 0
     width: 234
+<<<<<<< HEAD
     height: 749
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
   controlID: 12556
+=======
+    height: 947
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
+  vertical: 1
+  controlID: 17650
+>>>>>>> origin/Ryan's-Branch
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -290,7 +448,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 234
+<<<<<<< HEAD
     height: 399
+=======
+    height: 499
+>>>>>>> origin/Ryan's-Branch
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 9}
@@ -326,9 +488,15 @@ MonoBehaviour:
     height: 378
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 7015feff
     m_LastClickedID: -125584
     m_ExpandedIDs: e209feff4c4dfeff1ea1feffb852ffff00000000ea790000f6790000007a0000
+=======
+    m_SelectedIDs: a2fbffff
+    m_LastClickedID: -1118
+    m_ExpandedIDs: befbffff00000000
+>>>>>>> origin/Ryan's-Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -346,7 +514,12 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
+<<<<<<< HEAD
   m_ExpandedScenes: []
+=======
+  m_ExpandedScenes:
+  - TestScene
+>>>>>>> origin/Ryan's-Branch
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -367,9 +540,15 @@ MonoBehaviour:
     x: 0
     y: 399
     width: 234
+<<<<<<< HEAD
     height: 350
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
+=======
+    height: 448
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+>>>>>>> origin/Ryan's-Branch
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -412,7 +591,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets
+=======
+    - Assets/Characters/png/Soldier2
+>>>>>>> origin/Ryan's-Branch
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -422,9 +605,15 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 28530000
     m_LastClickedID: 21288
     m_ExpandedIDs: 285300001c5500002a560000ce5800000075000002750000
+=======
+    m_SelectedIDs: 82240000
+    m_LastClickedID: 9346
+    m_ExpandedIDs: 72250000e4250000262800004c2900002c2c0000e22f0000783500006e360000384600008a460000fa4600009a480000d44c0000d64c0000
+>>>>>>> origin/Ryan's-Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -449,10 +638,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7015feff
     m_LastClickedID: 0
     m_ExpandedIDs: 285300001c5500002a560000ce5800000075000002750000
+=======
+    scrollPos: {x: 0, y: 5403}
+    m_SelectedIDs: a2fbffff
+    m_LastClickedID: 0
+    m_ExpandedIDs: 72250000e4250000262800004c2900002c2c0000e22f0000783500006e360000384600008a460000fa4600009a480000d44c0000d64c0000
+>>>>>>> origin/Ryan's-Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -468,7 +664,11 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
+=======
+      m_ClientGUIView: {fileID: 10}
+>>>>>>> origin/Ryan's-Branch
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -477,8 +677,13 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 7015feff
     m_LastClickedInstanceID: -125584
+=======
+    m_SelectedInstanceIDs: a2fbffff
+    m_LastClickedInstanceID: -1118
+>>>>>>> origin/Ryan's-Branch
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -506,7 +711,11 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 82
+=======
+  m_DirectoriesAreaWidth: 115
+>>>>>>> origin/Ryan's-Branch
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -524,9 +733,15 @@ MonoBehaviour:
     x: 1163
     y: 0
     width: 277
+<<<<<<< HEAD
     height: 749
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    height: 947
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> origin/Ryan's-Branch
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}

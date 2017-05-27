@@ -5,7 +5,6 @@ namespace UnityStandardAssets._2D
 {
     public class Camera2DFollow : MonoBehaviour
     {
-        //public GameObject player;
         public Transform target;
         public float damping = 1;
         public float lookAheadFactor = 3;
@@ -23,32 +22,12 @@ namespace UnityStandardAssets._2D
             m_LastTargetPosition = target.position;
             m_OffsetZ = (transform.position - target.position).z;
             transform.parent = null;
-
-            
         }
 
-        private void Awake()
-        {
-            /*foreach (Transform child in transform)
-            {
-                if (child.CompareTag("Player"))
-                {
-                    target = child;
-                }
-            }*/
-        }
 
         // Update is called once per frame
         private void Update()
         {
-            foreach (Transform child in transform)
-            {
-                if (child.CompareTag("Player"))
-                {
-                    target = child;
-                }
-            }
-
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - m_LastTargetPosition).x;
 

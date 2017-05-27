@@ -12,6 +12,13 @@ public class PlayerScript : MonoBehaviour
     public Slider healthBar;
     //public float healthBarLength;
 	bool isDead = false;
+    private bool m_throw;
+    private bool m_aim;
+    public bool m_hurt;
+    bool m_shoot;
+    bool m_melee;
+    bool m_happy;
+    bool m_crouch;
 
     // end my variables
 
@@ -62,6 +69,12 @@ public class PlayerScript : MonoBehaviour
         {
             isDead = false;
         }
+
+        if (m_hurt == true)
+        {
+            StartCoroutine(WaitTime());
+            m_hurt = false;
+        }
     }
 
     private void FixedUpdate()
@@ -83,11 +96,43 @@ public class PlayerScript : MonoBehaviour
 
 		// Set animation for death
 		m_Anim.SetBool("isDead", isDead);
+
+        // Set animation for throw
+        m_Anim.SetBool("Throw", m_throw);
+
+        // Set animation for aim
+        m_Anim.SetBool("Aim", m_aim);
+
+        // Set animation for hurt
+        m_Anim.SetBool("Hurt", m_hurt);
+
+        // Set animation for shoot
+        m_Anim.SetBool("Shoot", m_shoot);
+
+        // Set animation for melee
+        m_Anim.SetBool("Melee", m_melee);
+
+        // Set animation for happy
+        m_Anim.SetBool("Happy", m_happy);
+
+        
     }
 
 
-    public void Move(float move, bool jump)
+    public void Move(float move, bool jump, bool m_crouch)
     {
+        // If crouching, check to see if the character can stand up
+        if (!m_crouch && m_Anim.GetBool("Crouch"))
+        {
+            if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+            {
+                m_crouch = true;
+            }
+        }
+
+        // Set animation for crouch
+        m_Anim.SetBool("Crouch", m_crouch);
+
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
         {
@@ -135,6 +180,9 @@ public class PlayerScript : MonoBehaviour
     public void TakeDamage(int amount)
     {
         curHealth -= amount;
+        m_hurt = true;
+        m_Anim.SetBool("Hurt", true);
+        
     }
 
     float CalculateHealth()
@@ -156,4 +204,15 @@ public class PlayerScript : MonoBehaviour
         //Load last check point
 
     }
+
+    public void Attack()
+    {
+
+    }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(1);
+    }
+
 }

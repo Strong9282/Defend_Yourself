@@ -29,10 +29,10 @@ public class PlayerScriptControl : MonoBehaviour
     private void FixedUpdate()
     {
         // Read the inputs.
-        bool crouch = Input.GetKey(KeyCode.LeftControl);
+        bool m_crouch = Input.GetKey(KeyCode.LeftControl);
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
         // Pass all parameters to the character control script.
-        m_Character.Move(h, m_Jump);
+        m_Character.Move(h, m_Jump, m_crouch);
         m_Jump = false;
     }
 }

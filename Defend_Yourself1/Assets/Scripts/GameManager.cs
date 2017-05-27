@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
     {
         settingsMenuCanvas.SetActive(false);
     }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -24,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
 
     public void Quit()

@@ -100,8 +100,7 @@ public class PlayerScript : MonoBehaviour
         // Set animation for throw
         m_Anim.SetBool("Throw", m_throw);
 
-        // Set animation for aim
-        m_Anim.SetBool("Aim", m_aim);
+        
 
         // Set animation for hurt
         m_Anim.SetBool("Hurt", m_hurt);
@@ -109,8 +108,7 @@ public class PlayerScript : MonoBehaviour
         // Set animation for shoot
         m_Anim.SetBool("Shoot", m_shoot);
 
-        // Set animation for melee
-        m_Anim.SetBool("Melee", m_melee);
+        
 
         // Set animation for happy
         m_Anim.SetBool("Happy", m_happy);
@@ -119,7 +117,7 @@ public class PlayerScript : MonoBehaviour
     }
 
 
-    public void Move(float move, bool jump, bool m_crouch)
+    public void Move(float move, bool jump, bool m_crouch, bool m_aim, bool m_melee)
     {
         // If crouching, check to see if the character can stand up
         if (!m_crouch && m_Anim.GetBool("Crouch"))
@@ -130,8 +128,14 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
+        // Set animation for aim
+        m_Anim.SetBool("Aim", m_aim);
+
         // Set animation for crouch
         m_Anim.SetBool("Crouch", m_crouch);
+
+        // Set animation for melee
+        m_Anim.SetBool("Melee", m_melee);
 
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
@@ -214,5 +218,4 @@ public class PlayerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
     }
-
 }

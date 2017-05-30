@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class MyNetworkManager : NetworkManager 
 {
-	public Button Player1Button;
-	public Button Player2Button;
-	public Button Player3Button;
-	public Button Player4Button;
+	public Button FrankButton;
+	public Button JackButton;
+	public Button AngelaButton;
+	public Button ScarButton;
+	public int playerIndex = 0;
 
 	// Use this for initialization
 	void Start () 
@@ -20,20 +21,34 @@ public class MyNetworkManager : NetworkManager
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		playerListeners ();
 	}
 
-	void playerListeners()
+	void playerListeners() // button actions, when clicked execute function from PlayerPicker below
 	{
-		Player1Button.onClick.AddListener (delegate {AvatarPicker (Player1Button.name);});
-		Player2Button.onClick.AddListener (delegate {AvatarPicker (Player2Button.name);});
-		Player3Button.onClick.AddListener (delegate {AvatarPicker (Player3Button.name);});
-		Player4Button.onClick.AddListener (delegate {AvatarPicker (Player4Button.name);});
+		FrankButton.onClick.AddListener (delegate {PlayerPicker (FrankButton.name);});
+		JackButton.onClick.AddListener (delegate {PlayerPicker (JackButton.name);});
+		AngelaButton.onClick.AddListener (delegate {PlayerPicker(AngelaButton.name);});
+		ScarButton.onClick.AddListener (delegate {PlayerPicker (ScarButton.name);});
 
 	}
 
-	void AvatarPicker(string buttonName)
+	void PlayerPicker(string buttonName) // Player Picker, when the player clicks on the button corresponding to the player, assign that player to the spawn
 	{
-		
+		switch (buttonName) {
+		case "FrankButton":    // If frank button is clicked assign frank's  player prefab
+			playerIndex = 0;
+			break;
+		case "JackButton":
+			playerIndex = 1;
+			break;
+		case "AngelaButton":
+			playerIndex = 2;
+			break;
+		case "ScarButton":
+			playerIndex = 3;
+			break;
+		}
+		playerPrefab = spawnPrefabs [playerIndex]; // Assign the player index corresponding to the player that was slected from the character select screen
 	}
 }

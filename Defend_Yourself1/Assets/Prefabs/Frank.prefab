@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 61927975308766596}
   - component: {fileID: 114576943848642828}
   - component: {fileID: 114567609999495318}
+  - component: {fileID: 114626205609289184}
   m_Layer: 0
   m_Name: Frank
   m_TagString: Player
@@ -206,13 +207,44 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 100
   healthBar: {fileID: 0}
-  healthBarLength: 0
   m_MaxSpeed: 6
   m_JumpForce: 800
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114626205609289184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481782935626616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 172
+    i1: 216
+    i2: 32
+    i3: 134
+    i4: 88
+    i5: 220
+    i6: 84
+    i7: 53
+    i8: 153
+    i9: 174
+    i10: 27
+    i11: 50
+    i12: 249
+    i13: 244
+    i14: 185
+    i15: 67
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!212 &212440233604987660
 SpriteRenderer:
   m_ObjectHideFlags: 1

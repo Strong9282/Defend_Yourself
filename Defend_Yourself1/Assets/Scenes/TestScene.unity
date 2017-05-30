@@ -2072,6 +2072,12 @@ Prefab:
       propertyPath: bulletSpawn
       value: 
       objectReference: {fileID: 50894492}
+    - target: {fileID: 114567609999495318, guid: acd8208658dc543599ae1b32f9f4b943,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1320225038171600, guid: e33e0c153cc949e4084172a20bb0dba2,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acd8208658dc543599ae1b32f9f4b943, type: 2}
   m_IsPrefabParent: 0

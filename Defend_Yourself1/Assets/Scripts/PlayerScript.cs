@@ -105,8 +105,7 @@ public class PlayerScript : MonoBehaviour
         // Set animation for hurt
         m_Anim.SetBool("Hurt", m_hurt);
 
-        // Set animation for shoot
-        m_Anim.SetBool("Shoot", m_shoot);
+        
 
         
 
@@ -117,7 +116,7 @@ public class PlayerScript : MonoBehaviour
     }
 
 
-    public void Move(float move, bool jump, bool m_crouch, bool m_aim, bool m_melee)
+    public void Move(float move, bool jump, bool m_crouch, bool m_aim, bool m_melee, bool m_shoot)
     {
         // If crouching, check to see if the character can stand up
         if (!m_crouch && m_Anim.GetBool("Crouch"))
@@ -127,6 +126,9 @@ public class PlayerScript : MonoBehaviour
                 m_crouch = true;
             }
         }
+
+        // Set animation for shoot
+        m_Anim.SetBool("Shoot", m_shoot);
 
         // Set animation for aim
         m_Anim.SetBool("Aim", m_aim);

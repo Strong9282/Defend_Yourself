@@ -8,6 +8,8 @@ public class CharacterSelector : MonoBehaviour
 
 { 
 	public GameObject characterSelector;
+	public GameObject theCamera;
+	public GameObject MainCamera;
 
 	void start ()
 	{
@@ -19,8 +21,10 @@ public class CharacterSelector : MonoBehaviour
 		
 	}
 
-	public void Disable()
+	public void Select()
 	{
 		characterSelector.SetActive (false);
+		MainCamera.SetActive (false);
+		theCamera.SetActive (true);	
 	}
 }

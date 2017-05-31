@@ -49,3 +49,6 @@ TagManager:
   - name: Characters
     uniqueID: 4149814119
     locked: 0
+  - name: UiText
+    uniqueID: 4193113567
+    locked: 0

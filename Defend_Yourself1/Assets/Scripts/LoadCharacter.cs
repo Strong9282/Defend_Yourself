@@ -14,7 +14,7 @@ public class LoadCharacter : MonoBehaviour {
 	void Start () 
 	{
 		characterSel = characterSelector.GetComponent<CharacterSelector> ();
-		selectedPlayer = characterSel.selectedChar;
+		//selectedPlayer = characterSel.selectedChar;
 		DisableAll ();
 		SpawnChar ();
 	}

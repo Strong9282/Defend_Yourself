@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 61743216720573320}
   - component: {fileID: 114939384434127132}
   - component: {fileID: 114953501720516114}
+  - component: {fileID: 114870833685023738}
   m_Layer: 0
   m_Name: Scar
   m_TagString: Player
@@ -210,6 +211,38 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114870833685023738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151569494031010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 69
+    i1: 118
+    i2: 254
+    i3: 164
+    i4: 221
+    i5: 98
+    i6: 107
+    i7: 212
+    i8: 107
+    i9: 95
+    i10: 70
+    i11: 210
+    i12: 238
+    i13: 121
+    i14: 53
+    i15: 176
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114939384434127132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,16 +254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be5baae97cece94ab2a659980f1ce4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  curHealth: 100
-  healthBar: {fileID: 0}
-  m_hurt: 0
-  m_MaxSpeed: 6
-  m_JumpForce: 800
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &114953501720516114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,9 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64646615af3fa8542b3b5e2356ccd1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1132873837962226, guid: 0f1c1cce05b57274cba1ba250eff710d,
-    type: 2}
-  bulletSpawn: {fileID: 4209924564383008}
 --- !u!212 &212405017479170214
 SpriteRenderer:
   m_ObjectHideFlags: 1

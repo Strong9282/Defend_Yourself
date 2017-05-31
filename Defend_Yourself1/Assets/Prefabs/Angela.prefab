@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 61545401383847736}
   - component: {fileID: 114469122392155172}
   - component: {fileID: 114874788121361702}
+  - component: {fileID: 114846064725728194}
   m_Layer: 0
   m_Name: Angela
   m_TagString: Player
@@ -221,16 +222,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be5baae97cece94ab2a659980f1ce4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  curHealth: 100
-  healthBar: {fileID: 0}
-  m_hurt: 0
-  m_MaxSpeed: 6
-  m_JumpForce: 800
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967295
+--- !u!114 &114846064725728194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1585356513848172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 63
+    i1: 245
+    i2: 100
+    i3: 100
+    i4: 214
+    i5: 89
+    i6: 190
+    i7: 68
+    i8: 104
+    i9: 134
+    i10: 247
+    i11: 199
+    i12: 0
+    i13: 209
+    i14: 204
+    i15: 224
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114874788121361702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,9 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64646615af3fa8542b3b5e2356ccd1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1132873837962226, guid: 0f1c1cce05b57274cba1ba250eff710d,
-    type: 2}
-  bulletSpawn: {fileID: 4288847690589668}
 --- !u!212 &212417319177465856
 SpriteRenderer:
   m_ObjectHideFlags: 1

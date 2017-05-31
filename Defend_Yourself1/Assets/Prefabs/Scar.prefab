@@ -78,7 +78,7 @@ GameObject:
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4044638365252548
 Transform:
   m_ObjectHideFlags: 1
@@ -254,6 +254,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be5baae97cece94ab2a659980f1ce4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  curHealth: 0
+  healthBar: {fileID: 0}
+  m_hurt: 0
+  m_MaxSpeed: 10
+  m_JumpForce: 400
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114953501720516114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64646615af3fa8542b3b5e2356ccd1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  bulletSpawn: {fileID: 0}
 --- !u!212 &212405017479170214
 SpriteRenderer:
   m_ObjectHideFlags: 1

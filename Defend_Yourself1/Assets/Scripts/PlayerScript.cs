@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     // My variables below:
     public float maxHealth = 100;
     public float curHealth;
-    public Slider healthBar;
+    //public Slider healthBar;
     //public float healthBarLength;
 	bool isDead = false;
     private bool m_throw;
@@ -44,7 +44,7 @@ public class PlayerScript : MonoBehaviour
     private void Awake()
     {
 
-
+        
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
@@ -53,12 +53,12 @@ public class PlayerScript : MonoBehaviour
 
         // my references
         curHealth = maxHealth;
-        healthBar.value = CalculateHealth();
+        //healthBar.value = CalculateHealth();
     }
 
     void Update()
     {
-        healthBar.value = CalculateHealth();
+        //healthBar.value = CalculateHealth();
 		//print (isDead);
 		Death ();
         if (curHealth <= 0 && !isDead)

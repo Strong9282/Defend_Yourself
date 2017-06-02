@@ -9,8 +9,8 @@ public class PlayerScript : MonoBehaviour
     // My variables below:
     public float maxHealth = 100;
     public float curHealth;
-    //public Slider healthBar;
-    //public float healthBarLength;
+    public Slider healthBar;
+    public float healthBarLength;
 	bool isDead = false;
     private bool m_throw;
     private bool m_aim;
@@ -53,12 +53,12 @@ public class PlayerScript : MonoBehaviour
 
         // my references
         curHealth = maxHealth;
-        //healthBar.value = CalculateHealth();
+        healthBar.value = CalculateHealth();
     }
 
     void Update()
     {
-        //healthBar.value = CalculateHealth();
+        healthBar.value = CalculateHealth();
 		//print (isDead);
 		Death ();
         if (curHealth <= 0 && !isDead)

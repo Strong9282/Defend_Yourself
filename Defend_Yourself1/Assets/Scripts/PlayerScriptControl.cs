@@ -9,6 +9,7 @@ public class PlayerScriptControl : MonoBehaviour
     private PlayerScript m_Character;
     private bool m_Jump;
     private bool m_shoot;
+    private bool m_throw;
 
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
@@ -43,8 +44,9 @@ public class PlayerScriptControl : MonoBehaviour
         bool m_melee = Input.GetKey(KeyCode.G);
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
         bool m_shoot = Input.GetKey(KeyCode.C);
+        bool m_throw = Input.GetKey(KeyCode.V);
         // Pass all parameters to the character control script.
-        m_Character.Move(h, m_Jump, m_crouch, m_aim, m_melee, m_shoot);
+        m_Character.Move(h, m_Jump, m_crouch, m_aim, m_melee, m_shoot, m_throw);
         m_Jump = false;
     }
 

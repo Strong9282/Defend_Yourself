@@ -148,11 +148,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &58185638660078740
 CircleCollider2D:
@@ -222,6 +222,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be5baae97cece94ab2a659980f1ce4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  curHealth: 0
+  m_hurt: 0
+  m_MaxSpeed: 10
+  m_JumpForce: 400
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &114846064725728194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64646615af3fa8542b3b5e2356ccd1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  bulletSpawn: {fileID: 0}
 --- !u!212 &212417319177465856
 SpriteRenderer:
   m_ObjectHideFlags: 1

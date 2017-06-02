@@ -9,6 +9,10 @@ TagManager:
   - Firstdoor
   - Acid
   - SelectedCharacter
+  - FrankHealthHud
+  - JackHealthHud
+  - AngelaHealthHud
+  - ScarHealthHud
   layers:
   - Default
   - TransparentFX

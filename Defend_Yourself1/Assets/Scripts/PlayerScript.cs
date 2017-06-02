@@ -41,6 +41,11 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+    void Start()
+    {
+
+    }
+
     private void Awake()
     {
 

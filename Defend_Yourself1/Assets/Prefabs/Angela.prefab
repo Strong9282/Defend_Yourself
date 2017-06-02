@@ -125,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1585356513848172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.31, y: -5.63, z: -0.3}
+  m_LocalPosition: {x: -2.47, y: -5.63, z: -0.3}
   m_LocalScale: {x: 0.38653716, y: 0.38653716, z: 0.38653716}
   m_Children:
   - {fileID: 4105584008415802}
@@ -224,6 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   curHealth: 0
+  healthBar: {fileID: 0}
+  healthBarLength: 0
   m_hurt: 0
   m_MaxSpeed: 10
   m_JumpForce: 400
@@ -274,8 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64646615af3fa8542b3b5e2356ccd1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  bulletSpawn: {fileID: 0}
+  bulletPrefab: {fileID: 1132873837962226, guid: 0f1c1cce05b57274cba1ba250eff710d,
+    type: 2}
+  bulletSpawn: {fileID: 4288847690589668}
 --- !u!212 &212417319177465856
 SpriteRenderer:
   m_ObjectHideFlags: 1

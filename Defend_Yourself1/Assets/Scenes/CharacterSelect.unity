@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 329267292}
   - component: {fileID: 329267291}
   m_Layer: 5
-  m_Name: Jack
+  m_Name: JackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1305,6 +1305,46 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224687952998169148, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 224687952998169148, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224848197834206218, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 224848197834206218, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224822245964072328, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 224822245964072328, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581725990342648, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581725990342648, guid: d045995b743a06b4d96be759475c37c8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d045995b743a06b4d96be759475c37c8, type: 2}
   m_IsPrefabParent: 0
@@ -1410,7 +1450,7 @@ GameObject:
   - component: {fileID: 407435484}
   - component: {fileID: 407435483}
   m_Layer: 5
-  m_Name: Scar
+  m_Name: ScarButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2895,7 +2935,7 @@ GameObject:
   - component: {fileID: 978965302}
   - component: {fileID: 978965301}
   m_Layer: 5
-  m_Name: Frank
+  m_Name: FrankButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3465,7 +3505,7 @@ GameObject:
   - component: {fileID: 1070787118}
   - component: {fileID: 1070787117}
   m_Layer: 5
-  m_Name: Angela
+  m_Name: AngelaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

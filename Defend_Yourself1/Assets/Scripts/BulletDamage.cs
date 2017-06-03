@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class BulletDamage : MonoBehaviour
+public class BulletDamage : NetworkBehaviour
 {
     public float speed;
-    public float damageTotal;
+    public int damageTotal;
 
     public PlayerScriptControl player;
+    public PlayerScript playerHealth;
 
 	// Use this for initialization
 	void Start ()
     {
         player = FindObjectOfType<PlayerScriptControl>();
+        playerHealth = player.GetComponent<PlayerScript>();
 
         if (player.transform.localScale.x < 0)
         {
@@ -24,6 +27,10 @@ public class BulletDamage : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
 
         Destroy(gameObject, 2.0f);
@@ -32,5 +39,18 @@ public class BulletDamage : MonoBehaviour
 
         //transform.Rotate(0, x, 0);
         //transform.Translate(0, 0, z);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+        else if (other.tag == "Player")
+        {
+            playerHealth.TakeDamage(damageTotal);
+            Destroy(gameObject);
+        }
     }
 }

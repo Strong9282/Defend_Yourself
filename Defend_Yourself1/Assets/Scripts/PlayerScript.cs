@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerScript : NetworkBehaviour
 {
     // My variables below:
     public float maxHealth = 100;
@@ -63,6 +64,11 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         healthBar.value = CalculateHealth();
 		//print (isDead);
 		Death ();

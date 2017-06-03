@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(PlayerScript))]
-public class PlayerScriptControl : MonoBehaviour
+public class PlayerScriptControl : NetworkBehaviour
 {
     private PlayerScript m_Character;
     private bool m_Jump;
@@ -22,6 +23,11 @@ public class PlayerScriptControl : MonoBehaviour
 
     private void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         if (!m_Jump)
         {
             // Read the jump input in Update so button presses aren't missed.

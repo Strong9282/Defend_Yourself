@@ -49,7 +49,6 @@ public class PlayerScript : NetworkBehaviour
 
     private void Awake()
     {
-
         
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");

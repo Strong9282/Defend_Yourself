@@ -48,7 +48,6 @@ public class PlayerScript : MonoBehaviour
 
     private void Awake()
     {
-
         
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");

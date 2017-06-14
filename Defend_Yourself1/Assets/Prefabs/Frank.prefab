@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 114491400652853174}
   - component: {fileID: 114119508929117682}
   - component: {fileID: 114126625076428912}
+  - component: {fileID: 114295804036830970}
   m_Layer: 0
   m_Name: Frank
   m_TagString: Player
@@ -360,6 +361,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1132873837962226, guid: 0f1c1cce05b57274cba1ba250eff710d,
     type: 2}
   bulletSpawn: {fileID: 4155787285731816}
+  b_damage: {fileID: 0}
+  speed: 6
 --- !u!114 &114126625076428912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -391,7 +394,7 @@ MonoBehaviour:
     i14: 198
     i15: 168
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114221845214377402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -419,6 +422,27 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114295804036830970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731022986871984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 0
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114491400652853174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -441,6 +465,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_FacingRight: 1
 --- !u!114 &114592503046154652
 MonoBehaviour:
   m_ObjectHideFlags: 1

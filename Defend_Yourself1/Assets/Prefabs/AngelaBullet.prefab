@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4862695519191770}
   - component: {fileID: 212177024773720716}
   - component: {fileID: 50498135161244024}
-  - component: {fileID: 114295760053849046}
   - component: {fileID: 61061197948789496}
-  - component: {fileID: 114161646747591608}
+  - component: {fileID: 114703941605853038}
+  - component: {fileID: 114646753257483662}
+  - component: {fileID: 114377023091759964}
   m_Layer: 0
   m_Name: AngelaBullet
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132873837962226}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.0000009616506, z: 0, w: -1}
   m_LocalPosition: {x: 1.1165121, y: -12, z: -1}
   m_LocalScale: {x: 0.24386293, y: 0.24386288, z: 0.24386288}
   m_Children: []
@@ -89,7 +90,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.83, y: 0.37}
   m_EdgeRadius: 0
---- !u!114 &114161646747591608
+--- !u!114 &114377023091759964
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,7 +98,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132873837962226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114646753257483662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132873837962226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SceneId:
@@ -120,8 +142,8 @@ MonoBehaviour:
     i14: 113
     i15: 13
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114295760053849046
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114703941605853038
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -132,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f191d98d18b7c48bf573581724f280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  damageTotal: 15
+  speed: 6
+  damageTotal: 0
   player: {fileID: 0}
   playerHealth: {fileID: 0}
 --- !u!212 &212177024773720716

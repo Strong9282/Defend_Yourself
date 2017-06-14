@@ -20,8 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4228555931253044}
   - component: {fileID: 212710572484583342}
-  - component: {fileID: 50539126957299514}
+  - component: {fileID: 50026466097111630}
   - component: {fileID: 114401806182676864}
+  - component: {fileID: 114498019549951454}
+  - component: {fileID: 114452927393746242}
   m_Layer: 0
   m_Name: RPG Bullet
   m_TagString: Untagged
@@ -42,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50539126957299514
+--- !u!50 &50026466097111630
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -52,15 +54,15 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &114401806182676864
 MonoBehaviour:
@@ -76,6 +78,60 @@ MonoBehaviour:
   speed: 6
   damageTotal: 20
   player: {fileID: 0}
+  playerHealth: {fileID: 0}
+--- !u!114 &114452927393746242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320225038171600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114498019549951454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320225038171600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 227
+    i1: 62
+    i2: 12
+    i3: 21
+    i4: 60
+    i5: 201
+    i6: 73
+    i7: 228
+    i8: 8
+    i9: 65
+    i10: 114
+    i11: 162
+    i12: 11
+    i13: 176
+    i14: 219
+    i15: 162
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &212710572484583342
 SpriteRenderer:
   m_ObjectHideFlags: 1

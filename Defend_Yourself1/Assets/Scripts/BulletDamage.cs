@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class BulletDamage : NetworkBehaviour
 {
-    public float speed;
+    public float speed = 6;
     public int damageTotal;
 
     public PlayerScriptControl player;
@@ -17,22 +17,17 @@ public class BulletDamage : NetworkBehaviour
         player = FindObjectOfType<PlayerScriptControl>();
         playerHealth = player.GetComponent<PlayerScript>();
 
-        if (player.transform.localScale.x < 0)
-        {
-            speed = -speed;
-            transform.Rotate(0, 180, 0);
-        }
+//		if (player.transform.localScale.x < 0)
+//		{
+//			speed = -speed;
+//			transform.Rotate(0, 180, 0);
+//		}
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
-        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
-
+      // GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
         Destroy(gameObject, 2.0f);
         //var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         //var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
@@ -43,11 +38,8 @@ public class BulletDamage : NetworkBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isLocalPlayer)
-        {
-            return;
-        }
-        else if (other.tag == "Player")
+  
+      if(other.tag == "Player")
         {
             playerHealth.TakeDamage(damageTotal);
             Destroy(gameObject);

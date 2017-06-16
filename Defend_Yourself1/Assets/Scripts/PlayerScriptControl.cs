@@ -18,23 +18,18 @@ public class PlayerScriptControl : NetworkBehaviour
 
 	public BulletDamage b_damage;
 	public float speed;
+    public int bulletAmount;
+    public int bulletMax;
+    public bool reloading;
 
     private void Awake()
     {
         m_Character = GetComponent<PlayerScript>();
 		b_damage = GetComponent<BulletDamage> ();
+        reloading = false;
     }
 
-	private void Start()
-	{
-//		if (m_Character.transform.localScale.x < 0)
-//		{
-//			//bullet = (GameObject) Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation); // Instantiate the bullet on the server
-//			//bullet.GetComponent<Rigidbody2D> ().velocity = new Vector2 (bulletSpeed, 0); // increase the velocity on the bullet after creation
-//			bulletSpeed = -bulletSpeed;
-//			bullet.transform.Rotate(0, 180, 0);
-//		}
-	}
+
     private void Update()
     {
         if (!isLocalPlayer)
@@ -58,6 +53,11 @@ public class PlayerScriptControl : NetworkBehaviour
 		{
 			CmdFire ();
 		}
+        //if (bulletAmount <= 0)
+        //{
+           // StartCoroutine(BulletReloadTime());
+       // }
+        
     }
 
 
@@ -70,33 +70,42 @@ public class PlayerScriptControl : NetworkBehaviour
 	[Command]
 	void CmdFire()
 	{
-//			Rigidbody2D bulletClone = Instantiate (bullet, bulletSpawn.transform.position, transform.rotation);
 
-//		bullet.GetComponent<Rigidbody2D> ().velocity = bullet.transform.forward * bulletSpeed;
-//		NetworkServer.Spawn (bulletPrefab);
-//			Debug.Log ("Bullet Fired");
-
-
-		bullet = (GameObject) Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation); // Instantiate the bullet on the server
-		//bullet.GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed,0); // increase the velocity on the bullet after creation
-		bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
-		//NetworkServer.Spawn (bullet); // Spawn the bullet prefab on the client
-		if (m_Character.m_FacingRight == true)
-		{
-			//bullet = (GameObject) Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation); // Instantiate the bullet on the server
-			//bullet.GetComponent<Rigidbody2D> ().velocity = new Vector2 (bulletSpeed, 0); // increase the velocity on the bullet after creation
-			//speed = -speed;
-			bullet.transform.Rotate(0, 0, 0);
-		}
-		else
-		{
-			bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, GetComponent<Rigidbody2D>().velocity.y);
-			//speed = -speed;
-			bullet.transform.Rotate(0, 180, 0);
-		}
-		NetworkServer.Spawn (bullet); // Spawn the bullet prefab on the client
-		Destroy (bullet, 2.0f);// destroy the bullet after 2 seconds
-
+        if (bulletAmount >= 1 && reloading == false)
+        {
+            bulletAmount = bulletAmount - 1;
+            print(bulletAmount);
+            bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation); // Instantiate the bullet on the server
+                                                                                                        //bullet.GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed,0); // increase the velocity on the bullet after creation
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
+            if (m_Character.m_FacingRight == true)
+            {
+                
+                bullet.transform.Rotate(0, 0, 0);
+            }
+            else
+            {
+                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, GetComponent<Rigidbody2D>().velocity.y);
+                //speed = -speed;
+                bullet.transform.Rotate(0, 180, 0);
+            }
+            NetworkServer.Spawn(bullet); // Spawn the bullet prefab on the client
+            Destroy(bullet, 2.0f);// destroy the bullet after 2 seconds
+        }
+        else if (bulletAmount <= 0)
+        {
+            //return;
+            StartCoroutine(BulletReloadTime());
+        }
 	}
+
+    IEnumerator BulletReloadTime()
+    {
+        reloading = true;
+        print("wait 5 seconds");
+        yield return new WaitForSeconds(5);
+        bulletAmount = bulletMax;
+        reloading = false;
+    }
 }
 

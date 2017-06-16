@@ -363,6 +363,9 @@ MonoBehaviour:
   bulletSpawn: {fileID: 4155787285731816}
   b_damage: {fileID: 0}
   speed: 6
+  bulletAmount: 10
+  bulletMax: 10
+  reloading: 0
 --- !u!114 &114126625076428912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,9 +436,9 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 0
+  m_TransformSyncMode: 2
   m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
+  m_SyncRotationAxis: 3
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
   m_MovementTheshold: 0.001

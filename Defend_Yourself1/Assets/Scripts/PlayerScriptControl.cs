@@ -71,7 +71,7 @@ public class PlayerScriptControl : NetworkBehaviour
 	void CmdFire()
 	{
 
-        if (bulletAmount >= 1 && reloading == false)
+        if (bulletAmount >= 1)
         {
             bulletAmount = bulletAmount - 1;
             print(bulletAmount);
@@ -92,7 +92,7 @@ public class PlayerScriptControl : NetworkBehaviour
             NetworkServer.Spawn(bullet); // Spawn the bullet prefab on the client
             Destroy(bullet, 2.0f);// destroy the bullet after 2 seconds
         }
-        else if (bulletAmount <= 0)
+        else if (!reloading && bulletAmount <= 0)
         {
             //return;
             StartCoroutine(BulletReloadTime());

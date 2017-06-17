@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class BulletDamage : NetworkBehaviour
 {
-    public float speed = 6;
+    public float speed;
     public int damageTotal;
 
     public PlayerScriptControl player;
@@ -27,6 +27,7 @@ public class BulletDamage : NetworkBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        
       // GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
         Destroy(gameObject, 2.0f);
         //var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;

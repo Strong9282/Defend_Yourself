@@ -20,6 +20,7 @@ public class PlayerScript : NetworkBehaviour
     bool m_melee;
     bool m_happy;
     bool m_crouch;
+   
 
     // end my variables
 

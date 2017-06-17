@@ -221,7 +221,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1793430787971242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.36, y: 0.79, z: 0}
+  m_LocalPosition: {x: 1.93, y: 0.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4968125446352570}
@@ -260,7 +260,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1793724918462092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.07, y: -5.63, z: -0.3}
+  m_LocalPosition: {x: 0.36266828, y: -5.6410484, z: -0.3}
   m_LocalScale: {x: 0.38653716, y: 0.38653716, z: 0.38653716}
   m_Children:
   - {fileID: 4939143366979668}
@@ -508,7 +508,7 @@ MonoBehaviour:
     type: 2}
   bulletSpawn: {fileID: 4288592991490728}
   b_damage: {fileID: 0}
-  speed: 6
+  speed: 15
   bulletAmount: 1
   bulletMax: 1
   reloading: 0

@@ -13,6 +13,7 @@ TagManager:
   - JackHealthHud
   - AngelaHealthHud
   - ScarHealthHud
+  - Damage
   layers:
   - Default
   - TransparentFX

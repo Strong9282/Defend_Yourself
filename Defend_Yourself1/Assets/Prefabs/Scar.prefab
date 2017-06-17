@@ -660,11 +660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64646615af3fa8542b3b5e2356ccd1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1132873837962226, guid: 0f1c1cce05b57274cba1ba250eff710d,
+  bulletPrefab: {fileID: 1132873837962226, guid: a5eabf49d37801d4588dfa0b6fee2e08,
     type: 2}
   bulletSpawn: {fileID: 4209924564383008}
   b_damage: {fileID: 0}
-  speed: 6
+  speed: 30
   bulletAmount: 5
   bulletMax: 5
   reloading: 0

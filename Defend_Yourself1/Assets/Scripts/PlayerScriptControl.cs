@@ -52,12 +52,7 @@ public class PlayerScriptControl : NetworkBehaviour
 		if (Input.GetKeyDown (KeyCode.C)) 
 		{
 			CmdFire ();
-		}
-        //if (bulletAmount <= 0)
-        //{
-           // StartCoroutine(BulletReloadTime());
-       // }
-        
+		}        
     }
 
 
@@ -107,5 +102,14 @@ public class PlayerScriptControl : NetworkBehaviour
         bulletAmount = bulletMax;
         reloading = false;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Damage")
+        {
+
+        }
+    }
+
 }
 

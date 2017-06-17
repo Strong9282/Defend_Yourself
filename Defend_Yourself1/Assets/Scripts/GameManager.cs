@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject settingsMenuCanvas;
     public Slider[] volumeSliders;
+    public GameObject settingsMenu;
     
 
 	// Use this for initialization
@@ -24,7 +25,10 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		
+        if (Input.GetKey(KeyCode.I))
+        {
+            settingsMenu.SetActive(true);
+        }
 	}
 
     public void Play()

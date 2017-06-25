@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 114119508929117682}
   - component: {fileID: 114126625076428912}
   - component: {fileID: 114295804036830970}
+  - component: {fileID: 114081672555645644}
   m_Layer: 0
   m_Name: Frank
   m_TagString: Player
@@ -347,6 +348,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114081672555645644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731022986871984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95341404381593922}
+  m_ParameterSendBits: 2047
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!114 &114119508929117682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -459,9 +479,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   curHealth: 0
-  healthBar: {fileID: 114741708700694394}
   healthBarLength: 0
+  healthBar: {fileID: 114741708700694394}
+  m_throw: 0
   m_hurt: 0
+  m_shoot: 0
+  m_melee: 0
+  m_happy: 0
+  m_crouch: 0
   m_MaxSpeed: 10
   m_JumpForce: 400
   m_AirControl: 1
@@ -469,6 +494,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_FacingRight: 1
+  playScriptctrl: {fileID: 0}
 --- !u!114 &114592503046154652
 MonoBehaviour:
   m_ObjectHideFlags: 1

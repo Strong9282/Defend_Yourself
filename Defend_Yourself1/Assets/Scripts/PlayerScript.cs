@@ -4,22 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+//using UnityEngine.Networking.NetworkSystem;
+
 
 public class PlayerScript : NetworkBehaviour
 {
     // My variables below:
+	[SyncVar]
     public float maxHealth = 100;
+	[SyncVar]
     public float curHealth;
-    public Slider healthBar;
     public float healthBarLength;
+	public Slider healthBar;
 	bool isDead = false;
-    private bool m_throw;
+    public bool m_throw;
     private bool m_aim;
     public bool m_hurt;
-    bool m_shoot;
-    bool m_melee;
-    bool m_happy;
-    bool m_crouch;
+    public bool m_shoot;
+    public bool m_melee;
+    public bool m_happy;
+    public bool m_crouch;
    
 
     // end my variables
@@ -41,7 +45,8 @@ public class PlayerScript : NetworkBehaviour
     const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
     private Animator m_Anim;            // Reference to the player's animator component.
     private Rigidbody2D m_Rigidbody2D;
-    public bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    public bool m_FacingRight;  // For determining which way the player is currently facing.
+	public PlayerScriptControl playScriptctrl;
 
     void Start()
     {
@@ -50,13 +55,11 @@ public class PlayerScript : NetworkBehaviour
 
     private void Awake()
     {
-        
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
         m_Anim = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
         // my references
         curHealth = maxHealth;
         healthBar.value = CalculateHealth();
@@ -68,6 +71,7 @@ public class PlayerScript : NetworkBehaviour
         {
             return;
         }
+
 
         healthBar.value = CalculateHealth();
 		//print (isDead);
@@ -115,8 +119,7 @@ public class PlayerScript : NetworkBehaviour
         m_Anim.SetBool("Happy", m_happy);
         
     }
-
-    public void Move(float move, bool jump, bool m_crouch, bool m_aim, bool m_melee, bool m_shoot, bool m_throw)
+    public void RpcMove(float move, bool jump, bool m_crouch, bool m_aim, bool m_melee, bool m_shoot, bool m_throw)
     {
         // If crouching, check to see if the character can stand up
         if (!m_crouch && m_Anim.GetBool("Crouch"))
@@ -155,13 +158,13 @@ public class PlayerScript : NetworkBehaviour
             if (move > 0 && !m_FacingRight)
             {
                 // ... flip the player.
-                Flip();
+				RpcFlip();
             }
             // Otherwise if the input is moving the player left and the player is facing right...
             else if (move < 0 && m_FacingRight)
             {
                 // ... flip the player.
-                Flip();
+                RpcFlip();
             }
         }
         // If the player should jump...
@@ -174,20 +177,22 @@ public class PlayerScript : NetworkBehaviour
         }
     }
 
-
-    private void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        m_FacingRight = !m_FacingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
+	[ClientRpc]
+	private void RpcFlip()
+	{
+		m_FacingRight = !m_FacingRight;
+			//GetComponent<SpriteRenderer> ().flipX = false;
+			transform.Rotate (0, 180, 0);
+			//theScale.y = 180;
+			//transform.localScale = theScale;
+	}
 
     public void TakeDamage(int amount)
     {
+		if (!isServer) 
+		{
+			return;
+		}
         curHealth -= amount;
         m_hurt = true;
         m_Anim.SetBool("Hurt", true);
@@ -196,6 +201,7 @@ public class PlayerScript : NetworkBehaviour
 
     float CalculateHealth()
     {
+
         return curHealth / maxHealth;
     }
 
